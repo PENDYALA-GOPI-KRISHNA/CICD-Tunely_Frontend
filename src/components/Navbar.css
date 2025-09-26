@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-shadow: var(--shadow-neon);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  color: var(--text-color);
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  text-shadow: var(--shadow-neon);
+}
+
+.logout-button {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: var(--btn-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.logout-button:hover {
+  background-color: var(--primary);
+  color: var(--bg-color);
+  box-shadow: 0 0 12px var(--primary);
+}

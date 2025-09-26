@@ -1,0 +1,144 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ----------------------------- */
+/*  Hero Section                 */
+/* ----------------------------- */
+
+.hero-section {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: var(--text-color);
+  text-shadow: var(--shadow-neon);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero-section .app-name {
+  color: var(--primary);
+  text-shadow: var(--shadow-neon);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  animation: fadeInUp 2s ease forwards;
+}
+
+/* Animated neon background */
+.animated-bg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,47,146,0.1) 0%, transparent 70%);
+  animation: pulse 4s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* ----------------------------- */
+/*  Info Section                 */
+/* ----------------------------- */
+
+.info-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--surface-color);
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: var(--shadow-soft);
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  text-shadow: var(--shadow-neon);
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ----------------------------- */
+/*  Marquee Section              */
+/* ----------------------------- */
+
+.marquee-section {
+  margin: 3rem 0;
+  background-color: #1a1a1a;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.marquee-section marquee {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px var(--primary);
+  letter-spacing: 2px;
+}
+
+/* ----------------------------- */
+/* Animations                    */
+/* ----------------------------- */
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
