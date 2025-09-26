@@ -31,7 +31,7 @@ export const login = async (username, password) => {
     }
   }
 
-  const response = await axios.post(`${API_URL}/login`, { username, password });
+  const response = await axios.post(`http://localhost:8083/back1/auth/login`, { username, password });
   localStorage.setItem("token", response.data.token || response.data);
   return response.data;
 };
