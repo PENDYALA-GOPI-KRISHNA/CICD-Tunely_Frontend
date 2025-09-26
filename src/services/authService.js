@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8083/auth"; // Your backend URL
+const API_URL = "http://localhost:8083/back1/auth"; // Your backend URL
 
 const BACKEND_CONNECT = true; // false = use mock, true = call real backend
 
